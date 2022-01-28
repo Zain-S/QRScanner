@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".QRScanner">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="Qr generator and scanner"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="110dp"
+        android:background="@color/white"
+        android:hint="Type here to Generate QR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/qrcode"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/black"
+        android:contentDescription="TODO"
+        android:padding="5dp"
+        android:scaleType="center" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/black"
+        android:padding="4dp"
+        android:text="Generate"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/black"
+        android:padding="4dp"
+        android:text="Scan"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
