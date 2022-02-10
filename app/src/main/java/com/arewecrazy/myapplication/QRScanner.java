@@ -3,20 +3,16 @@ package com.arewecrazy.myapplication;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.nfc.tech.NfcBarcode;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -27,7 +23,7 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 public class QRScanner extends AppCompatActivity {
 
-    String Tag = "Testing";
+    //frontend
     private Button generate, scan;
     private EditText mytext;
     private ImageView qr_code;
@@ -36,6 +32,8 @@ public class QRScanner extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrscanner);
+
+        //binding
         generate = findViewById(R.id.generate);
         scan = findViewById(R.id.scan);
         mytext = findViewById(R.id.text);
@@ -96,61 +94,8 @@ public class QRScanner extends AppCompatActivity {
                          dialog.dismiss();
                      }
                  }) .create().show();
-
-
              }
 
         super.onActivityResult(requestCode, resultCode, data);
-    }
-
-
-
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        Log.i(Tag, "onStart");
-    }
-
-    @Override
-    protected void onResume(){
-        super.onResume();
-        Log.i(Tag, "onResume");
-    }
-
-    @Override
-    protected void onPause(){
-        super.onPause();
-        Log.i(Tag, "onPause");
-    }
-
-    @Override
-    protected void onStop(){
-        super.onStop();
-        Log.i(Tag, "onStop");
-    }
-
-    @Override
-    protected void onRestart(){
-        super.onRestart();
-        Log.i(Tag, "onRestart");
-    }
-
-    @Override
-    protected void onDestroy(){
-        super.onDestroy();
-        Log.i(Tag, "onDestroy");
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState){
-        super.onSaveInstanceState(outState);
-        Log.i(Tag, "onSaveInstantState");
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState){
-        super.onRestoreInstanceState(savedInstanceState);
-        Log.i(Tag, "onRestoreInstantState");
     }
 }
